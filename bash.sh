@@ -35,5 +35,6 @@ services:
       USER_ID : "1001"
     volumes:
       - "/docker/appdata/firefox-hadi:/config:rw"
+    restart: always
 EOF
 sudo docker-compose up -d
