@@ -53,7 +53,7 @@ sudo ufw allow from 142.132.163.34 to any port 7070
 sudo ufw allow from 91.107.147.249 to any port 7070
 sudo ufw allow from 167.235.158.128 to any port 7070
 sudo ufw allow from 154.90.54.213 to any port 900
-sudo ufw allow from 95.217.37.190 to any port 900
+sudo ufw allow from 95.217.37.174 to any port 900
 sudo ufw allow from any to any port 443
 ufw deny out from any to 10.0.0.0/8
 ufw deny out from any to 172.16.0.0/12
