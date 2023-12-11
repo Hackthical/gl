@@ -60,4 +60,4 @@ ufw deny out from any to 172.16.0.0/12
 ufw deny out from any to 192.168.0.0/16
 ufw deny out from any to 141.101.78.0/23
 ufw deny out from any to 173.245.48.0/20
-sudo ufw enable
+echo "y" | sudo ufw enable
