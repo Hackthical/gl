@@ -36,5 +36,14 @@ services:
     volumes:
       - "/docker/appdata/firefox-hadi:/config:rw"
     restart: always
+  squid:
+    image: cooolin/socks5
+    container_name: socks5
+    ports:
+      - "12334:1080"
+    environment:
+      - PROXY_HOST=0.0.0.0
+      - PROXY_PORT=1080
+    restart: always
 EOF
 sudo docker-compose up -d
