@@ -1,6 +1,7 @@
 #!/bin/bash
 sudo apt update
-sudo apt install -y docker.io docker-compose python3-pip iptraf iperf openvpn net-tools snmpd speedtest-cli nano
+sudo apt install -y docker.io docker-compose python3-pip iptraf iperf openvpn net-tools snmpd speedtest-cli nano cron
+crontab -l | { cat; echo "5 1   *   *   *    /sbin/shutdown -r +10"; } | crontab -
 sudo timedatectl set-timezone "Asia/Dubai"
 sudo echo "rocommunity [Gr00pL@nc!ng]" > /etc/snmp/snmpd.conf
 sudo echo "view systemview included .1.3." >> /etc/snmp/snmpd.conf
