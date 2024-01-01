@@ -64,7 +64,6 @@ sudo ufw allow from 91.107.147.249 to any port 7070
 sudo ufw allow from 167.235.158.128 to any port 7070
 sudo ufw allow from 95.217.37.174 
 sudo ufw allow from any to any port 443
-sudo ufw allow from any to any port 12334
 sudo ufw deny out from any to 10.0.0.0/8
 sudo ufw deny out from any to 172.16.0.0/12
 sudo ufw deny out from any to 192.168.0.0/16
