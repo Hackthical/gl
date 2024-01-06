@@ -48,3 +48,24 @@ services:
     restart: always
 EOF
 sudo docker-compose up -d
+sudo ufw default allow routed
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow from 5.75.196.198 to any port 22
+sudo ufw allow from 142.132.177.45 to any port 22
+sudo ufw allow from 142.132.163.34 to any port 22
+sudo ufw allow from 91.107.147.249 to any port 22
+sudo ufw allow from 167.235.158.128 to any port 22
+sudo ufw allow from 5.75.196.198 to any port 7070
+sudo ufw allow from 142.132.177.45 to any port 7070
+sudo ufw allow from 142.132.163.34 to any port 7070
+sudo ufw allow from 91.107.147.249 to any port 7070
+sudo ufw allow from 167.235.158.128 to any port 7070
+sudo ufw allow from 95.217.37.174 
+sudo ufw allow from any to any port 443
+sudo ufw deny out from any to 10.0.0.0/8
+sudo ufw deny out from any to 172.16.0.0/12
+sudo ufw deny out from any to 192.168.0.0/16
+sudo ufw deny out from any to 141.101.78.0/23
+sudo ufw deny out from any to 173.245.48.0/20
+echo "y" | sudo ufw enable
